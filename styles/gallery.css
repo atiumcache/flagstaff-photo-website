@@ -7,7 +7,7 @@
     #gallery-40 {
         padding: var(--sectionPadding);
         position: relative;
-        background-color: rgb(51, 50, 54);
+        background-color: var(--darkBackground);
     }
     #gallery-40 .cs-container {
         width: 100%;
@@ -76,33 +76,13 @@
         margin-bottom: 2.25em;
         position: relative;
     }
-    #gallery-40 .cs-picture-two:before {
-        content: "";
-        width: 18.8125em;
-        height: 27.6875em;
-        position: absolute;
-        display: block;
-        background: #f1eaff;
-        opacity: 1;
-        bottom: -1.5625em;
-        right: -1.375em;
-    }
+    
     #gallery-40 .cs-picture-three {
         width: 27.125em;
         height: 40.6875em;
         position: relative;
     }
-    #gallery-40 .cs-picture-three:before {
-        content: "";
-        width: 21.5em;
-        height: 31.8125em;
-        position: absolute;
-        display: block;
-        background: #f1eaff;
-        opacity: 1;
-        top: -0.8125em;
-        left: -1.5625em;
-    }
+    
     #gallery-40 .cs-picture-four {
         width: 28em;
         height: 36em;

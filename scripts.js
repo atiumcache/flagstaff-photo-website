@@ -50,3 +50,17 @@ if (elementsToFadeInUpOnScroll) {
     });
   });
 } 
+
+let images = ['images/grad1.jpg', 'images/grad2.jpg'];
+
+let index = 0;
+const imgElement = document.querySelector('#top-left');
+
+function changeTopLeft() {
+   imgElement.src = images[index];
+   index > 0 ? index = 0 : index++;
+}
+
+window.onload = function () {
+    setInterval(changeTopLeft, 2500);
+};

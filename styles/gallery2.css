@@ -1,0 +1,110 @@
+/*-- -------------------------- -->
+<---          Gallery           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #gallery-1234 {
+        padding: var(--sectionPadding);
+        background-color: var(--darkBackground);
+    }
+    #gallery-1234 .cs-container {
+        width: 100%;
+        /* changes to 100% at tablet */
+        max-width: 44rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+    }
+    #gallery-1234 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+    }
+
+    #gallery-1234 .cs-title {
+        color: var(--bodyTextColorWhite);
+    }
+    #gallery-1234 .cs-text {
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+    }
+    #gallery-1234 .cs-gallery {
+        width: 100%;
+        /* changes to flexbox at tablet */
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        /* 16px 20px */
+        gap: clamp(1rem, 2vw, 1.25rem);
+    }
+    #gallery-1234 .cs-flex {
+        /* breaks children from the parent. They are no longer considered children of the cs-flex and can now be flexed with the other images as part of the cs-gallery flexbox */
+        display: contents;
+    }
+    #gallery-1234 .cs-picture {
+        width: 100%;
+        height: 69vw;
+        /* changes at tablet */
+        max-height: 18.75rem;
+        display: block;
+        position: relative;
+    }
+    #gallery-1234 .cs-picture img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        /* Makes img tag act as a background image */
+        object-fit: cover;
+    }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #gallery-1234 .cs-container {
+        max-width: 100%;
+    }
+    #gallery-1234 .cs-gallery {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #gallery-1234 .cs-flex,
+    #gallery-1234 .cs-row {
+        width: 20%;
+    }
+    #gallery-1234 .cs-flex {
+        /* 375px - 680px */
+        height: clamp(23.4375rem, 50vw, 42.5rem);
+        max-height: 100%;
+        display: flex;
+        flex-direction: column;
+        /* 16px - 20px */
+        gap: clamp(1rem, 2vw, 1.25rem);
+    }
+    #gallery-1234 .cs-picture {
+        max-height: 100%;
+    }
+    #gallery-1234 .cs-picture1 {
+        height: 62%;
+        /* prevents flexbox from squishing it */
+        flex: none;
+    }
+    #gallery-1234 .cs-picture2 {
+        height: 100%;
+    }
+    #gallery-1234 .cs-row {
+        height: 40vw;
+        max-height: 32.5rem;
+    }
+}
+
+                                

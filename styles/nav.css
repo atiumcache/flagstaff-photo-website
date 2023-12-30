@@ -290,7 +290,7 @@
     }
 
     .cs-container .name {
-      font-family: 'Volkhorn SC';
+      font-family: var(--titleFontFamily), sans-serif;
       font-size: 3em;
       color: white;
       width: 100%;
