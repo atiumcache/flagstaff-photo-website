@@ -5,7 +5,7 @@
 @media only screen and (max-width: 63.9375rem) {
     body.cs-open {
       overflow: hidden;
-      
+      opacity: 0;
     }
 
     #cs-navigation .cs-container .name {
