@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/main.css">
-    <!-- <script src="jquery-3.7.1.min.js"></script> -->
+    
     <script src="scripts.js" async></script>
 </head>
 <body>
@@ -22,7 +22,7 @@
         </a> -->
         <h1 class="name">ruby + emerald</h1>
         <!--Navigation List-->
-        <nav class="cs-nav" role="navigation">
+        <nav id="main-nav" class="cs-nav" role="navigation">
             <!--Mobile Nav Toggle-->
             <button class="cs-toggle" aria-label="mobile menu toggle">
                 <div class="cs-box" aria-hidden="true">
@@ -59,36 +59,12 @@
     </div>
 </header>
                                 
-<!-- ============================================ -->
-<!--                    Hero                      -->
-<!-- ============================================ -->
 
-<section id="hero-444">
-    <div class="cs-container">
-        <div class="cs-content">
-            <!-- <span class="cs-tag">Local yokels</span> -->
-            <!-- <h1 class="cs-title">Storytime Photo</h1>
-            <p class="cs-text">
-                Capturing intimate, epic, & everlasting moments.
+<!-- HERO -->
+<section class="hero">
+    
 
-            </p> -->
-        </div>
-        <!-- <a href="" class="cs-cta">
-            Arrow Right
-            <svg class="cs-arrow" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none"><path fill="#FAFBFC" d="M24.55 31.367c-.317 0-.633-.117-.883-.367a1.258 1.258 0 0 1 0-1.767L32.9 20l-9.233-9.233a1.258 1.258 0 0 1 0-1.767 1.258 1.258 0 0 1 1.766 0L35.55 19.117a1.258 1.258 0 0 1 0 1.766L25.433 31c-.25.25-.566.367-.883.367Z"/><path fill="#FAFBFC" d="M34.383 21.25H6.333A1.26 1.26 0 0 1 5.083 20c0-.683.567-1.25 1.25-1.25h28.05c.684 0 1.25.567 1.25 1.25a1.26 1.26 0 0 1-1.25 1.25Z"/></svg>
-            Wrapped in a span so it can be animated
-            <span class="cs-cta-text">About<br> Us</span>
-        </a> -->
-    </div>
-
-    <!-- Background Image -->
-    <picture class="cs-background">
-        
-        <img loading="lazy" decoding="async" src="images/film5.JPG" alt="sky" width="1920" height="1000" aria-hidden="true">
-    </picture>
-</section>
-                                
-                                
+</section>                       
 
 <!-- ============================================ -->
 <!--                   Gallery                    -->
@@ -96,17 +72,14 @@
 
 <section id="gallery-40">
     <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Gallery</span>
-            <h2 class="cs-title">Our Featured Work</h2>
-        </div>
+        
         <div class="cs-image-group">
             <!-- Left Section -->
             <div class="cs-flex-group ">
                 <picture class="cs-picture cs-picture-one">
                     <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/models1-m.jpg">
-                    <source media="(min-width: 601px)" srcset="images/film7.jpeg">
-                    <img loading="lazy" decoding="async" src="images/film7.jpeg" alt="man sitting in chair" width="613" height="919">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/models1.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/models1.jpg" alt="man sitting in chair" width="613" height="919">
                 </picture>
                 <picture  class="cs-picture cs-picture-three">
                     <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/models3-m.jpg">
@@ -130,56 +103,7 @@
         </div>
     </div>
 </section>
-                                   
-
-<!-- ============================================ -->
-<!--                   Contact                    -->
-<!-- ============================================ -->
-
-<section id="contact-983">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Contact Us</span>
-            <h2 class="cs-title">Need photos?</h2>
-        </div>
-        <!--Form-->
-        <form class="cs-form" id="cs-form-983" name="Contact Form" method="post">
-            <label class="cs-label">
-                Name
-                <input class="cs-input" required type="text" id="name-587-983" name="name" placeholder="Name">
-            </label>
-            <label class="cs-label">
-                Phone
-                <input class="cs-input" required type="text" id="phone-587-983" name="phone" placeholder="Phone">
-            </label>
-            <label class="cs-label">
-                Email
-                <input class="cs-input" required type="text" id="email-587-983" name="email" placeholder="Email">
-            </label>
-            <label class="cs-label">
-                How did you hear about us?
-                <input class="cs-input" required type="text" id="hear-587-983" name="heat" placeholder="Google">
-            </label>
-            <label class="cs-label cs-message">
-                Message
-                <textarea class="cs-input cs-textarea" required name="Message" id="message-587-983" placeholder="Write message..."></textarea>
-            </label>
-            <div class="cs-wrapper">
-                <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
-            </div>
-        </form>
-    </div>
-    <!--Background Image-->
-    <picture class="cs-background">
-        <!--Mobile Image-->
-        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/salon-bg-m.jpg">
-        <!--Tablet and above Image-->
-        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/salon-bg.jpg">
-        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/salon-bg.jpg" alt="hair salon" width="2500" height="770">
-    </picture>
-</section>
                                 
-
 
 <!-- ============================================ -->
 <!--                   Footer                     -->

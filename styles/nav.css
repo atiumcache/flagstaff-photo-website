@@ -5,6 +5,7 @@
 @media only screen and (max-width: 63.9375rem) {
     body.cs-open {
       overflow: hidden;
+      
     }
 
     #cs-navigation .cs-container .name {
@@ -263,6 +264,8 @@
   @media only screen and (min-width: 64rem) {
     #cs-navigation {
       width: 100%;
+      opacity: 0;
+     
       /* prevents padding and border from affecting height and width */
       box-sizing: border-box;
       padding: 0 1rem;
@@ -406,3 +409,17 @@
     }
   }
                                   
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .fade-in-up {
+    opacity: 0;
+    animation: 1s both fadeInUp;
+  } 

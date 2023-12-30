@@ -1,43 +1,4 @@
-class CS_GalleryFilter {
-	filtersSelector = '.cs-button';
-	galleriesSelector = '.cs-gallery';
-	activeClass = 'cs-active';
-	hiddenClass = 'cs-hidden';
 
-	constructor() {
-		this.$galleries = document.querySelectorAll(this.galleriesSelector);
-		const $filters = document.querySelectorAll(this.filtersSelector);
-
-		this.onClick($filters[0]);
-
-		for (const $filter of $filters) {
-			$filter.addEventListener('click', () => this.onClick($filter));
-		}
-	}
-
-	onClick($filter) {
-		this.filter($filter.dataset.filter);
-
-		const { activeClass } = this;
-
-		this.$activeFilter?.classList.remove(activeClass);
-		$filter.classList.add(activeClass);
-
-		this.$activeFilter = $filter;
-	}
-
-	filter(filter) {
-		const showAll = filter == 'all';
-		const { hiddenClass } = this;
-
-		for (const $gallery of this.$galleries) {
-			const show = showAll || $gallery.dataset.category == filter;
-			$gallery.classList.toggle(hiddenClass, !show);
-		}
-	}
-}
-
-new CS_GalleryFilter();
                                 
 
 
@@ -76,17 +37,16 @@ for (const item of dropDowns) {
 }
                                 
 
-let navigation = document.getElementById('cs-navigation');
-
-document.addEventListener('scroll', function() {
-    // Get scroll position
-    let scrollPosition = window.scrollY;
-
-    // Calculate whether the scroll it 350px or not then set the opacity to face the navigation out
-    if (scrollPosition <= 50) {
-		navigation.style.opacity = 0;  
-    } else {
-        navigation.style.opacity = 0 + scrollPosition / 250;
-    }
-
-});
+// JavaScript fade in
+const elementsToFadeInUpOnScroll = document.querySelectorAll("#cs-navigation");
+if (elementsToFadeInUpOnScroll) {
+  window.addEventListener("scroll", function(event) {
+    elementsToFadeInUpOnScroll.forEach(function(element) {
+      if (window.scrollY > 10) {
+        element.classList.add("fade-in-up");
+      } else {
+        element.classList.remove("fade-in-up");
+      }
+    });
+  });
+} 
