@@ -2,26 +2,24 @@
 <---          Gallery           -->
 <--- -------------------------- -*/
 
-/* Mobile - 360px */
+/* Mobile */
 @media only screen and (min-width: 0rem) {
-    #gallery-404 {
+    #gallery-40 {
         padding: var(--sectionPadding);
-        overflow: hidden;
         position: relative;
+        background-color: rgb(51, 50, 54);
     }
-    #gallery-404 .cs-container {
+    #gallery-40 .cs-container {
         width: 100%;
-        /* changes to 1280px at tablet */
-        max-width: 34.375rem;
+        max-width: 80rem;
         margin: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         /* 48px - 64px */
         gap: clamp(3rem, 6vw, 4rem);
-        position: relative;
     }
-    #gallery-404 .cs-content {
+    #gallery-40 .cs-content {
         /* set text align to left if content needs to be left aligned */
         text-align: center;
         width: 100%;
@@ -31,176 +29,83 @@
         align-items: center;
     }
 
-    #gallery-404 .cs-title {
-        max-width: 20ch;
-    }
-    #gallery-404 .cs-button-group {
+    #gallery-40 .cs-title {
         margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        row-gap: 0.5rem;
-        column-gap: 2rem;
     }
-    #gallery-404 .cs-button {
-        font-size: 1rem;
-        line-height: 1.5em;
-        color: var(--bodyTextColor);
-        background-color: transparent;
-        border: none;
-        transition: color 0.3s;
-    }
-    #gallery-404 .cs-button:hover {
-        color: var(--primary);
-        cursor: pointer;
-    }
-    #gallery-404 .cs-button.cs-active {
-        color: var(--primary);
-    }
-    #gallery-404 .cs-gallery {
+    #gallery-40 .cs-image-group {
+        /* Scales the whole container down and grows with the view width */
+        /* increase vw unit to scale bigger, decrease to scale smaller */
+        font-size: min(1.4vw, 1em);
         width: 100%;
-        padding: 0;
         margin: 0;
-        opacity: 1;
-        visibility: visible;
-        position: relative;
+        padding: 0;
         display: flex;
         justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        /* 16px - 20px */
-        gap: clamp(1rem, 1.5vw, 1.25rem);
-        transition:
-            transform 0.7s,
-            opacity 0.3s,
-            visibility 0.5s,
-            top 0.3s,
-            left 0.3s;
-        /* makes the transform scaling origin the top left corner, dictates the direction by which the scale transforms animate towards */
-        transform-origin: left top;
+        align-items: flex-start;
+        position: relative;
     }
-    #gallery-404 .cs-gallery.cs-hidden {
-        /* by using visibility:hidden instead of display:none, we can see the animations from the opacity and transforms, display:none won't render animations. */
-        visibility: hidden;
-        /* prevents the mouse from interacting with it */
-        pointer-events: none;
-        /* hidden galleries have a 0 opacity, and we animate the opacity to 1 when they become active */
-        opacity: 0;
-        /* this top and left value help control the animation, by setting it to position absolute and left 0, the gallery won't fly off screen to the left, it will stop its position to be at the left edge of the .cs-container (left: 0). Same for the bottom:0 value, the gallery won't go past that position when it animates */
-        bottom: 0;
-        left: 0;
-        position: absolute;
-        /* prevents the hidden galleries from overflowing the section, and makes a nice animations to transition to and from */
-        transform: scaleY(0) scaleX(0);
+    #gallery-40 .cs-flex-group {
+        display: flex;
+        flex-direction: column;
     }
-    #gallery-404 .cs-gallery.cs-hidden .cs-image {
-        /* when gallery is hidden, add these styles to the cs-image to animate from when cs-hidden is removed from the .cs-gallery */
-        transform: translateY(2.1875rem);
-        opacity: 0;
+    #gallery-40 .cs-flex-group:first-of-type {
+        align-items: flex-end;
+        margin-right: 1.5em;
     }
-    #gallery-404 .cs-image {
-        border-radius: 1.25rem;
-        width: 47%;
-        aspect-ratio: 1;
-        /* clips the image corners */
-        overflow: hidden;
+    #gallery-40 .cs-picture {
         display: block;
         position: relative;
-        /* when .cs-hidden is removed from the .cs-gallery, reset these values and animate between their hidden styles */
-        transform: translateY(0rem);
-        opacity: 1;
-        transition:
-            opacity 0.6s,
-            transform 0.6s;
     }
-    #gallery-404 .cs-image:nth-of-type(1) {
-        /* changes transition delays at desktop */
-        /* these delays stagger the reveal of each image so they all go one after the other and not all at once */
-        transition-delay: 0.15s;
-    }
-    #gallery-404 .cs-image:nth-of-type(2) {
-        transition-delay: 0.3s;
-    }
-    #gallery-404 .cs-image:nth-of-type(3) {
-        transition-delay: 0.45s;
-    }
-    #gallery-404 .cs-image:nth-of-type(4) {
-        transition-delay: 0.6s;
-    }
-    #gallery-404 .cs-image:nth-of-type(5) {
-        transition-delay: 0.75s;
-    }
-    #gallery-404 .cs-image:nth-of-type(6) {
-        transition-delay: 0.9s;
-    }
-    #gallery-404 .cs-image img {
+    #gallery-40 .cs-picture img {
         position: absolute;
         top: 0;
         left: 0;
         height: 100%;
         width: 100%;
-        /* makes it act like a background image */
         object-fit: cover;
     }
-}
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    #gallery-404 .cs-container {
-        max-width: 80rem;
+    #gallery-40 .cs-picture-one {
+        width: 33.0625em;
+        height: 49.5em;
+        margin-bottom: 2.25em;
+        margin-top: 7.5em;
     }
-    #gallery-404 .cs-content {
-        text-align: left;
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: space-between;
+    #gallery-40 .cs-picture-two {
+        width: 32.8125em;
+        height: 44.3125em;
+        margin-bottom: 2.25em;
+        position: relative;
     }
-    #gallery-404 .cs-title {
-        margin: 0;
+    #gallery-40 .cs-picture-two:before {
+        content: "";
+        width: 18.8125em;
+        height: 27.6875em;
+        position: absolute;
+        display: block;
+        background: #f1eaff;
+        opacity: 1;
+        bottom: -1.5625em;
+        right: -1.375em;
     }
-    #gallery-404 .cs-image {
-        width: 31.8%;
-        aspect-ratio: 1;
+    #gallery-40 .cs-picture-three {
+        width: 27.125em;
+        height: 40.6875em;
+        position: relative;
     }
-}
-/* Desktop - 1300px */
-@media only screen and (min-width: 81.25rem) {
-    #gallery-404 .cs-flex {
-        max-width: 34.375rem;
+    #gallery-40 .cs-picture-three:before {
+        content: "";
+        width: 21.5em;
+        height: 31.8125em;
+        position: absolute;
+        display: block;
+        background: #f1eaff;
+        opacity: 1;
+        top: -0.8125em;
+        left: -1.5625em;
     }
-    #gallery-404 .cs-gallery {
-        align-items: stretch;
-        justify-content: center;
-    }
-    #gallery-404 .cs-image {
-        width: 39.375rem;
-        max-width: 100%;
-        height: 25rem;
-    }
-    #gallery-404 .cs-image:nth-of-type(2),
-    #gallery-404 .cs-image:nth-of-type(3),
-    #gallery-404 .cs-image:nth-of-type(4),
-    #gallery-404 .cs-image:nth-of-type(5) {
-        width: 19.0625rem;
-    }
-    #gallery-404 .cs-image:nth-of-type(1) {
-        /* these delays stagger the reveal of each image so they all go one after the other and not all at once */
-        transition-delay: 0.15s;
-    }
-    #gallery-404 .cs-image:nth-of-type(2) {
-        transition-delay: 0.3s;
-    }
-    #gallery-404 .cs-image:nth-of-type(3) {
-        transition-delay: 0.45s;
-    }
-    #gallery-404 .cs-image:nth-of-type(4) {
-        transition-delay: 0.15s;
-    }
-    #gallery-404 .cs-image:nth-of-type(5) {
-        transition-delay: 0.3s;
-    }
-    #gallery-404 .cs-image:nth-of-type(6) {
-        transition-delay: 0.45s;
+    #gallery-40 .cs-picture-four {
+        width: 28em;
+        height: 36em;
     }
 }
 

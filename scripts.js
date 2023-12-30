@@ -76,3 +76,17 @@ for (const item of dropDowns) {
 }
                                 
 
+let navigation = document.getElementById('cs-navigation');
+
+document.addEventListener('scroll', function() {
+    // Get scroll position
+    let scrollPosition = window.scrollY;
+
+    // Calculate whether the scroll it 350px or not then set the opacity to face the navigation out
+    if (scrollPosition <= 50) {
+		navigation.style.opacity = 0;  
+    } else {
+        navigation.style.opacity = 0 + scrollPosition / 250;
+    }
+
+});
