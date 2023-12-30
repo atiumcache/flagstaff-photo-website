@@ -15,6 +15,7 @@
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       position: fixed;
       z-index: 10000;
+      
     }
     #cs-navigation:before {
       content: "";
@@ -250,9 +251,9 @@
       box-sizing: border-box;
       padding: 0 1rem;
       background-color: #fff;
-      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       position: fixed;
       z-index: 10000;
+      background: rgba(51, 170, 51,  0)    /* full opaque green */ 
     }
     #cs-navigation .cs-container {
       width: 100%;
@@ -262,6 +263,7 @@
       justify-content: flex-end;
       align-items: center;
       gap: 1.5rem;
+      
     }
     #cs-navigation .cs-toggle {
       display: none;
@@ -306,7 +308,7 @@
       line-height: 1.5em;
       text-decoration: none;
       margin: 0;
-      color: var(--bodyTextColor);
+      color: var(--bodyTextColorWhite);
       display: block;
       position: relative;
     }
